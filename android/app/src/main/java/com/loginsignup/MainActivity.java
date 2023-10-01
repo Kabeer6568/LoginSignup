@@ -30,8 +30,8 @@ public class MainActivity extends ReactActivity {
         // If you opted-in for the New Architecture, we enable the Fabric Renderer.
         DefaultNewArchitectureEntryPoint.getFabricEnabled());
   }
-}
-public class MainActivity extends ReactActivity {
+
+  
   // ...
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -39,3 +39,5 @@ public class MainActivity extends ReactActivity {
   }
   // ...
 }
+
+
