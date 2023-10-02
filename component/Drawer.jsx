@@ -1,41 +1,36 @@
 import React from 'react'
 import {
-    Button,
+    Button,Text
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import {MainNavigation} from './Stack'
 import Home from '../screens/Home';
 import About from '../screens/About';
-import Example from '../screens/Example';
+import Contact from '../screens/Contact';
+import {TabsNavigation,TabsContact} from './Tabs';
+// import StackNavigation from './Stack';
 
 const Drawer = createDrawerNavigator();
+
 
 
 const DrawerAction = ()=>{
     return(
     
-    <NavigationContainer >
-      
-      <Drawer.Navigator>
-      <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="About" component={About} />
-      <Drawer.Screen name="Example" component={Example} />
-    </Drawer.Navigator>
+    
+        <Drawer.Navigator>
+             <Drawer.Screen name="Home" component={TabsNavigation} />
+             
+             <Drawer.Screen name="Contact" component={TabsContact} />
+             
+             
+           </Drawer.Navigator>
 
-    </NavigationContainer >
+       
     
     )
 }
 
-const DrawerBtn = (navigation)=>{
-    navigation.toggleDrawer();
-}
-
-const DrawerComp = (navigation)=>{
-
-    return(
-        <Button title='Testing' onPress={()=>navigation.toggleDrawer()} />
-    )
-}
-
-export default DrawerComp
+export default DrawerAction

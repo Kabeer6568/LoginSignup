@@ -9,14 +9,14 @@ const Example = ({navigation}) =>{
         
         <View style= {{ justifyContent: 'center',flex: 1,alignItems:"center"}}>
         <Text style = {{fontSize: 40,}}>
-            Exampple
+            Example
         </Text>
-        <Button title="Go To Home" onPress={()=>{
+        {/* <Button title="Go To Home" onPress={()=>{
             navigation.navigate('Home')
         }}/>
         <Button title="Go To About" onPress={()=>{
             navigation.navigate('About')
-        }}/>
+        }}/> */}
         </View>
         
         </>
