@@ -1,6 +1,7 @@
 <?php
 
 require_once "connection.php";
+session_start();
 
 if (isset($_POST['login'])) {
     $s_name = $_POST['student_name'];
@@ -16,6 +17,10 @@ if (isset($_POST['login'])) {
         $stored_hash = $row['password'];
 
         if (password_verify($pass, $stored_hash)) {
+
+            $_SESSION['student_name'] = $row['student_name'];
+            $_SESSION['roll_num'] = $row['Stu_roll_num'];
+
             echo "Login Successfull";
         }
         else{
